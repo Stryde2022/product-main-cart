@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Product list with cart</title>
+<script src="index.js" defer></script>
+</head>
+<body>
+  <main>
+    
+    <section class="menu">
+      <h1>Desserts</h1>
+
+      <div class="desserts">
+
+      </div>
+
+    </section>
+   
+    <!-- second section -->
+    <section class="cart">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <h2 class="cart-items">&nbsp;(0)</h2>
+      </div>
+
+      <div class="cart-content">
+        <div class="empty-cart-img">
+          <img src="assets/images/illustration-empty-cart.svg" alt="image of cartoon cake">
+        </div>
+        <p class="cart-msg">Your added items will appear here</p>
+      </div>
+    </section>
+
+
+    <!-- cofirm order section -->
+    <section class="confirm-order-section hide">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <h2 class="cart-items">&nbsp;(<span class="cart-number">0</span>)</h2>
+      </div>
+
+      <div class="overall-slot cart-content">
+        <div class="selected-items">
+          <p class="item">Classic Tiramisu</p>
+          <div class="quantity-container">
+            <p class="quantity">0x</p>
+            <p class="single-price">@$5.50</p>
+            <p class="total-price">$0.00</p>
+          </div>
+        </div>
+        <div class="remove-item">
+          <img class="remove-icon" src="assets/images/icon-remove-item.svg" alt="" >
+        </div>
+      </div>
+
+      <div class="order-container">
+        <p class="order-text">Order Total</p>
+        <p class="sum-total">$0.00</p>
+      </div>
+
+      <div class="carbon-free">
+        <div class="carbon-icon">
+          <img src="assets/images/icon-carbon-neutral.svg" alt="" class="tree-img">
+        </div>
+
+        <p class="carbon-msg">This is a <b>carbon-neutral</b> delivery</p>
+      </div>
+
+      <button class="confirm-btn">
+        Confirm Order
+      </button>
+    </section>
+
+    <!-- MODAL -->
+     <div class="overlay hide" style="display: block;">
+
+      <section class="order-modal" style="display: block;">
+        <div class="check-mark">
+          <img src="assets/images/icon-order-confirmed.svg" alt="">
+        </div>
+  
+        <h1>
+          Order Confirmed
+        </h1>
+        <p class="enjoy">
+          We hope you enjoy your food!
+        </p>
+  
+        <div class="items-table">
+          <div class="confirmed-items"> 
+            <div class="thumbnail">
+              <img src="assets/images/image-tiramisu-thumbnail.jpg" alt="">
+            </div>
+  
+            <div class="selected-items-1">
+              <p class="item">Classic Tiramisu</p>
+              <div class="quantity-container-1">
+                <p class="quantity">1x</p>
+                <p class="single-price">@$5.50</p>
+              </div>
+            </div>
+            <p class="item">$5.50</p>
+          </div>
+  
+          <div class="confirm-total">
+            <p class="order-text">Order Total</p>
+            <p class="sum-total">$46.50</p>
+          </div>
+        </div>
+  
+        <button class="new-order-btn">
+          Start New Order
+        </button>
+        
+      </section>
+     </div>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,599 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Red Hat Text", sans-serif;
+}
+
+main {
+    padding: 50px;
+    font-family: "Red Hat Text", sans-serif;
+    background-color: hsl(20, 50%, 98%);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: start;
+    font-size: 2rem;
+    margin: 0;
+    width: 100%;
+}
+
+.dessert {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.waffle-img {
+    background: url(./assets/images/image-waffle-mobile.jpg);
+}
+
+.creme-brulee-img {
+    background: url(./assets/images/image-creme-brulee-mobile.jpg);
+}
+
+.macaron-img {
+    background: url(./assets/images/image-macaron-mobile.jpg);
+}
+
+.tiramisu-img {
+    background: url(./assets/images/image-tiramisu-mobile.jpg);
+}
+
+.baklava-img {
+    background: url(./assets/images/image-baklava-mobile.jpg);
+}
+
+.meringue-img {
+    background: url(./assets/images/image-meringue-mobile.jpg);
+}
+
+.cake-img {
+    background: url(./assets/images/image-cake-mobile.jpg);
+}
+
+.brownie-img {
+    background: url(./assets/images/image-brownie-mobile.jpg);
+}
+
+.panna-cotta-img {
+    background: url(./assets/images/image-panna-cotta-mobile.jpg);
+}
+
+.img-inactive {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 7px;
+}
+
+.add-btn p, .dessert-info p {
+    font-weight: 600;
+}
+
+.item-text {
+    color: #1ea475;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.item-full-text {
+    margin-top: 5px;
+    margin-bottom: 5px;
+} 
+
+.item-price {
+    color: #c73a0f;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.hide {
+    display: none !important;
+}
+
+.inactive {/*add to cart btn */
+    display: flex;
+    place-content: center;
+    gap: 7px;
+    padding: 0.6em 0;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 600;
+    box-sizing: border-box;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    border: 1.5px solid rgba(0, 0, 0, 0.368);
+    background-color: white;
+    margin: 0 auto;
+    width: 60%;
+    transform: translateY(-50%);
+    height: 37.5px;
+    cursor: pointer;
+}
+
+.inactive:hover {
+    border: 1px solid #c73a0f;
+    color: #c73a0f;
+}
+
+.inactive p {
+    pointer-events: none;
+}
+
+.active {
+    background-color: #c73a0f;
+    padding: 0.6em 0;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: ease-in-out .2s;
+}
+
+.cart-image {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+}
+
+.add {
+    margin: 0;
+    height: 20.55px;
+}
+
+.dec-quant, .inc-quant {
+    width: 15px;
+    height: 15px;
+    padding: 0.2em;
+    border: 1.5px solid white;
+    display: flex;
+    place-content: center;
+    border-radius: 50%;
+    transition: ease-in-out .2s;
+    box-sizing: border-box;
+}
+
+.dec-quant:hover, .inc-quant:hover {
+    background-color: white;
+    border-color: white;
+    cursor: pointer;
+}
+
+.order-img {
+    width: 100%;
+    height: 100%;
+    stroke-width: 5px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(103%) contrast(103%);
+} 
+
+.order-img:hover {
+    filter: brightness(0) saturate(100%) invert(30%) sepia(84%) saturate(1400%) hue-rotate(349deg) brightness(86%) contrast(104%);
+}
+
+.order-label {
+    margin-left: 2em;
+    margin-right: 2em;
+    color: white;
+    font-weight: 600;
+}
+
+.cart, .confirm-order-section, .order-modal {
+    width: 100%;
+    background-color: white;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 1.5em;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.cart-header {
+    display: flex;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    color: #c73a0f;
+    margin: 0;
+}
+
+.empty-cart-img {
+    display: flex;
+    justify-content: center;
+    padding: 1.5em 0 1em;
+}
+
+.cart-msg {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    color: #87635a;
+    margin: 0;
+} 
+
+.hide {
+    display: none;
+}
+
+.overall-slot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #00000018;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.selected-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.quantity-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 0;
+}
+
+.item {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.quantity {
+    font-weight: 700;
+    color: #c73a0f;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.single-price {
+    color: #1ea475;
+    margin-left: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.total-price {
+    color: #ad8985;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.remove-item{
+    width: 15px;
+    height: 15px;
+    padding: 0.2em;
+    border: 1.5px solid rgb(203, 177, 169);
+    display: flex;
+    place-content: center;
+    border-radius: 50%;
+    transition: ease-in-out .2s;
+    box-sizing: border-box;
+}
+
+.remove-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.order-container, .confirm-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.confirm-total {
+    padding: 0.5em 0em;
+    border-radius: 7px;
+}
+
+.order-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: hsl(12, 20%, 44%);
+}
+
+.sum-total {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.carbon-free {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    padding: 1em;
+    background-color: #f4edeb;
+    font-size: clamp(0.68rem, 3vw, 0.9rem);
+}
+
+.carbon-msg {
+    align-self: center;
+    color: #c73a0f;
+    margin: 0px;
+}
+
+.carbon-icon {
+    height: fit-content;
+    width: fit-content;
+}
+
+.tree-img {
+    inline-size: clamp(80%, 5vw, 100%);
+}
+
+.confirm-btn, .new-order-btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 1.5em;
+    font-family: "Red Hat Text", sans-serif;
+    background-color: #c73a0f;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.confirm-btn:hover, .new-order-btn:hover {
+    background-color: hsl(14, 94%, 26%);
+    transition: 0.5s;
+}
+
+.enjoy {
+    color: #ad8985;
+    margin: 0;
+    padding-bottom: 2em;
+}
+
+.items-table {
+    background-color: #f4edeb;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.confirmed-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #00000037;
+    padding-bottom: 10px;
+}
+
+.quantity-container-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.selected-items-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 45px;
+    gap: 8px;
+}
+
+.thumbnail>img {
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 2%, 12%, 0.70);
+    z-index: 1;
+}
+
+.order-modal {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    width: 100%;
+    overflow-y: auto;
+    z-index: 2;
+}
+
+
+/* Responsive for Tablet */
+@media screen and (min-width: 768px) {
+    main {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2em;
+        box-sizing: border-box;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+    .desserts {
+        display: grid;
+        grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+        gap: 1.2em;
+    }
+
+    .add-button img {
+        inline-size: 85%;
+    }
+    
+    .waffle-img {
+        background: url(./assets/images/image-waffle-tablet.jpg);
+    }
+    
+    .creme-brulee-img {
+        background: url(./assets/images/image-creme-brulee-tablet.jpg);
+    }
+    
+    .macaron-img {
+        background: url(./assets/images/image-macaron-tablet.jpg);
+    }
+    
+    .tiramisu-img {
+        background: url(./assets/images/image-tiramisu-tablet.jpg);
+    }
+    
+    .baklava-img {
+        background: url(./assets/images/image-baklava-tablet.jpg);
+    }
+    
+    .meringue-img {
+        background: url(./assets/images/image-meringue-tablet.jpg);
+    }
+    
+    .cake-img {
+        background: url(./assets/images/image-cake-tablet.jpg);
+    }
+    
+    .brownie-img {
+        background: url(./assets/images/image-brownie-tablet.jpg);
+    }
+    
+    .panna-cotta-img {
+        background: url(./assets/images/image-panna-cotta-tablet.jpg);
+    }
+
+    .dessert-img {
+        aspect-ratio: 1/1;
+    }
+
+    .img-inactive {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 7px;
+    }
+
+    .dessert {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+    .add-btn {
+        width: 85%;
+        font-size: 0.75rem;
+        height: 31.9px;
+        gap: 3px;
+        padding: 0.55em;
+    }
+
+    .active {
+        background-color: #c73a0f;
+        justify-content: space-evenly;
+        align-items: center;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        transition: 0.2s ease-in-out;
+    }
+
+    .carbon-free {
+        gap: 0.5em;
+        align-items: start;
+    }
+
+    .carbon-icon {
+        display: block;
+    }
+
+    .order-modal {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        padding: 2em 1.5em 1.5em;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 500px;
+        overflow-y: auto;
+        z-index: 2;
+    }
+}
+
+
+
+@media screen and (min-width: 1100px) {
+    main {
+        padding: 70px 150px;
+    }
+
+    .waffle-img {
+        background: url(./assets/images/image-waffle-desktop.jpg);
+    }
+    
+    .creme-brulee-img {
+        background: url(./assets/images/image-creme-brulee-desktop.jpg);
+    }
+    
+    .macaron-img {
+        background: url(./assets/images/image-macaron-desktop.jpg);
+    }
+    
+    .tiramisu-img {
+        background: url(./assets/images/image-tiramisu-desktop.jpg);
+    }
+    
+    .baklava-img {
+        background: url(./assets/images/image-baklava-desktop.jpg);
+    }
+    
+    .meringue-img {
+        background: url(./assets/images/image-meringue-desktop.jpg);
+    }
+    
+    .cake-img {
+        background: url(./assets/images/image-cake-desktop.jpg);
+    }
+    
+    .brownie-img {
+        background: url(./assets/images/image-brownie-desktop.jpg);
+    }
+    
+    .panna-cotta-img {
+        background: url(./assets/images/image-panna-cotta-desktop.jpg);
+    }
+
+    .dessert-img {
+        aspect-ratio: 1/1;
+    }
+
+    .img-inactive {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border-radius: 7px;
+    }
+
+    .add-btn {
+        gap: 4px;
+        width: 70%;
+        font-size: 0.8rem;
+        height: 35.8px;
+    }
+}
